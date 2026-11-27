@@ -1,0 +1,12 @@
+서버:
+  - changed-files: [{ any-glob-to-any-file: "backend/**" }]
+앱:
+  - changed-files: [{ any-glob-to-any-file: "app/**" }]
+소개:
+  - changed-files: [{ any-glob-to-any-file: "landing/**" }]
+계약:
+  - changed-files: [{ any-glob-to-any-file: "contracts/**" }]
+인프라:
+  - changed-files: [{ any-glob-to-any-file: [".github/**", "infra/**"] }]
+문서:
+  - changed-files: [{ any-glob-to-any-file: ["docs/**", "*.md"] }]

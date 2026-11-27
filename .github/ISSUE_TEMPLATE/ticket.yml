@@ -1,0 +1,26 @@
+name: 티켓
+description: 스펙 이슈의 하위 작업 하나
+body:
+  - type: input
+    id: parent
+    attributes:
+      label: 상위 이슈
+      placeholder: "#12"
+    validations: { required: true }
+  - type: textarea
+    id: work
+    attributes:
+      label: 작업 내용
+    validations: { required: true }
+  - type: textarea
+    id: tests
+    attributes:
+      label: 테스트 항목
+      description: 그대로 테스트 이름이 된다
+      placeholder: "- 마감 후 유예 시간 안에 올린 인증은 지각으로 판정된다"
+    validations: { required: true }
+  - type: input
+    id: figma
+    attributes:
+      label: 피그마 프레임
+      description: 화면이 바뀌는 티켓만

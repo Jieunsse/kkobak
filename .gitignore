@@ -1,0 +1,15 @@
+.DS_Store
+node_modules/
+.env
+.env.*
+!.env.example
+# backend
+.gradle/
+build/
+*.iml
+.idea/
+# app / landing
+.expo/
+.next/
+dist/
+coverage/

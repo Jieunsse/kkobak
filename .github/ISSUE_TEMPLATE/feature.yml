@@ -1,0 +1,41 @@
+name: 기능
+description: 새 기능이나 개선
+labels: ["기능"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 현재 문제
+      placeholder: 그룹장이 정산할 때 누가 얼마를 내야 하는지 직접 계산한다.
+    validations: { required: true }
+  - type: textarea
+    id: goal
+    attributes:
+      label: 목표
+      placeholder: 기간이 끝나면 멤버마다 받을 돈과 낼 돈이 정산표로 나온다.
+    validations: { required: true }
+  - type: textarea
+    id: done
+    attributes:
+      label: 완료 조건
+      placeholder: "- rules-spec.md 7-5절 예시 1의 금액이 그대로 나온다"
+    validations: { required: true }
+  - type: textarea
+    id: out
+    attributes:
+      label: 제외 범위
+  - type: dropdown
+    id: scope
+    attributes:
+      label: 영역
+      options: [identity, group, verification, judgment, ledger, notification, app, landing, contracts, infra, docs]
+    validations: { required: true }
+  - type: input
+    id: policy
+    attributes:
+      label: 관련 정책
+      placeholder: docs/planning/rules-spec.md 7장
+  - type: input
+    id: figma
+    attributes:
+      label: 피그마 링크

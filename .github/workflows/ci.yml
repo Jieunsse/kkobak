@@ -1,0 +1,40 @@
+name: ci
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+# 필수 체크라서 폴더가 아직 없어도 작업은 돌고 성공으로 끝난다.
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - if: hashFiles('backend/build.gradle.kts') != ''
+        uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: '21', cache: gradle }
+      - if: hashFiles('backend/build.gradle.kts') != ''
+        working-directory: backend
+        run: ./gradlew build --no-daemon   # 테스트, ktlint, detekt 포함
+
+  app:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - if: hashFiles('app/package.json') != ''
+        uses: actions/setup-node@v4
+        with: { node-version: '22', cache: npm, cache-dependency-path: app/package-lock.json }
+      - if: hashFiles('app/package.json') != ''
+        working-directory: app
+        run: npm ci && npm run lint && npm run typecheck && npm test -- --ci
+
+  landing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - if: hashFiles('landing/package.json') != ''
+        uses: actions/setup-node@v4
+        with: { node-version: '22', cache: npm, cache-dependency-path: landing/package-lock.json }
+      - if: hashFiles('landing/package.json') != ''
+        working-directory: landing
+        run: npm ci && npm run lint && npm run typecheck && npm test -- --ci

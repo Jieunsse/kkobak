@@ -1,0 +1,35 @@
+name: 버그
+description: 동작이 구현 의도와 다르다
+labels: ["버그"]
+body:
+  - type: textarea
+    id: steps
+    attributes:
+      label: 재현 순서
+    validations: { required: true }
+  - type: textarea
+    id: intent
+    attributes:
+      label: 구현 의도
+    validations: { required: true }
+  - type: textarea
+    id: actual
+    attributes:
+      label: 실제 결과
+    validations: { required: true }
+  - type: input
+    id: where
+    attributes:
+      label: 위치
+      placeholder: 앱 그룹 현황 화면 / backend judgment
+    validations: { required: true }
+  - type: textarea
+    id: logs
+    attributes:
+      label: 로그·스크린샷
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 우선순위
+      options: [긴급, 높음, 보통]
+    validations: { required: true }
