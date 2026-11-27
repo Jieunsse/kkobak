@@ -11,6 +11,7 @@
 | `landing/` | Next.js 소개 페이지 |
 | `contracts/` | 서버와 앱이 함께 보는 API 계약 |
 | `docs/planning/` | 기획(`planning.md`)과 그룹 규칙 명세(`rules-spec.md`). 동작의 원본 |
+| `docs/design/` | 디자인 시스템(`design-system.md`): 색·글자·간격 토큰, 금지 규칙. 화면을 만들 때 먼저 읽는다 |
 | `docs/engineering/` | 일하는 흐름(`work-pipeline.md`), GitHub 규칙(`github-conventions.md`) |
 | `GLOSSARY.md` | 도메인 용어 원본. 이름을 지을 때 먼저 읽는다 |
 
