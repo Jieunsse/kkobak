@@ -18,7 +18,8 @@
 
 ## 일하는 흐름
 
-기능마다 설계 세션(grill-with-docs → to-spec → to-tickets) → 티켓마다 구현 → 교차 리뷰 → PR → 사람이 머지 → retro.
+기능마다 설계 세션(grill-with-docs → to-spec) → API·로직 티켓 → 사람이 피그마 시안 → 화면 티켓 → 티켓마다 구현 → 교차 리뷰 → PR → 사람이 머지 → retro.
+스펙 이슈에는 사용자 흐름, 화면 목록, 화면마다 보여 줄 상태를 적는다. 시안은 이것을 보고 그린다.
 티켓 라벨이 구현자를 정한다: 「Codex 구현」은 Codex가 만들고 Claude가 리뷰한다. 「Claude 구현」은 사람이 연 Claude 세션이 만들고 Codex가 리뷰한다. 자세한 흐름과 이유는 `docs/engineering/work-pipeline.md`.
 
 ## 코드 작성 방식
