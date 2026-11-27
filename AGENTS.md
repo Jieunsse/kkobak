@@ -12,7 +12,7 @@
 | `app/` | Expo(React Native) 앱 |
 | `landing/` | Next.js 소개 페이지 |
 | `contracts/` | 서버와 앱이 함께 보는 API 계약 |
-| `docs/planning/` | 기획 문서(`planning.md`), 그룹 규칙 명세(`rules-spec.md`), 회원·안전·알림·운영 정책, 기능 가설(`hypotheses.md`). 앱이 어떻게 동작해야 하는지는 여기가 원본이다 |
+| `docs/planning/` | 기획 문서(`planning.md`), 그룹 규칙 명세(`rules-spec.md`), 회원·안전·알림·운영·개인정보 정책, 정책 운영 원칙, 기능 가설(`hypotheses.md`). 앱이 어떻게 동작해야 하는지는 여기가 원본이다 |
 | `docs/design/` | 디자인 시스템(`design-system.md`): 색·글자·간격 토큰, 금지 규칙. 화면을 만들 때 먼저 읽는다 |
 | `docs/engineering/` | 일하는 흐름(`work-pipeline.md`), GitHub 규칙(`github-conventions.md`) |
 | `GLOSSARY.md` | 용어집. 업무 용어의 원본이다. 이름을 지을 때 먼저 읽는다 |
